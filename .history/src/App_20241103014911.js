@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       {viewer === 0 && (
-        <Products
+        <Payment
           dataF={dataF}
           setDataF={setDataF}
           viewer={viewer}
@@ -21,15 +21,7 @@ function App() {
         />
       )}
       {viewer === 1 && (
-        <Checkout
-          dataF={dataF}
-          setDataF={setDataF}
-          viewer={viewer}
-          setViewer={setViewer}
-        />
-      )}
-      {viewer === 2 && (
-        <Confirmation
+        <Summary
           dataF={dataF}
           setDataF={setDataF}
           viewer={viewer}

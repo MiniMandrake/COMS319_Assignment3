@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       {viewer === 0 && (
-        <Products
+        <Payment
           dataF={dataF}
           setDataF={setDataF}
           viewer={viewer}
