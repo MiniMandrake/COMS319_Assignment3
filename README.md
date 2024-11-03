@@ -1,70 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# COMS 319 - Assignment 3
 
-## Available Scripts
+- Small Cart Application
 
-In the project directory, you can run:
+## requirements (Must use)
 
-### `npm start`
+    1. React
+    2. Uses Views to switch between pages
+        1. product browsing page 
+        2. payment page (credit card, delivery address etc)
+        3. summary/confirmation page
+    3. Bootstrap/tailwindcss for styling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Product Browsing Page
+    1. 6 - 12 products
+    2. (+) and (-) buttons
+    3. number of products in cart adjacent to buttons
+    4. products do not go negative
+    5. global cart variable
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    6. search for product tab
+        - Hint: Listen to the “input” event on the search input field.
 
-### `npm test`
+### Payment Page
+    1. Checkout button brings user to summary page
+    2. continue browsing button (retain current cart info)
+    3. Payment Form
+        - Fullname
+        - email
+        - card
+        - address1
+        - address2 (optional)
+        - city
+        - state
+        - zip
+        (EACH VALIDATED AND REQUIRED)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Confirmation Page
+    1. Confirmation Button brings user to confirmation page
+    2. display session information while censoring sensitive information
+    3. confirm payment will clear cart data.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Video Submission
+    1. 3 minute Video
+    2. explain directories of our projects (the folders)
+    3. explain user experience of website
+    4. power point slide of the authors
+    5. mp4 format
+    refer to video recommendations for further information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Idea
+    we will use energy and protein drinks as the product of our choice. 
+    Assignment skeleton will be taken from our latest activity.
