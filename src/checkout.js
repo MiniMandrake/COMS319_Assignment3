@@ -18,6 +18,7 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
           id: item.id,
           title: item.title,
           image: item.image,
+          price: item.price,
           count: 1,
         };
       }
@@ -36,14 +37,25 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     }, [items]);
 
     return (
-      <div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(18rem, 1fr))",
+          gap: "1rem",
+        }}
+      >
         {summarizedItems.map((item) => (
           <div key={item.id} className='card mb-3' style={{ width: "18rem" }}>
             <img src={item.image} className='card-img-top' alt={item.title} />
             <div className='card-body'>
               <h5 className='card-title'>{item.title}</h5>
-              <p className='card-text'>ID: {item.id}</p>
+
               <p className='card-text'>Quantity: {item.count}</p>
+              <p className='card-text'>Price: {item.price}$</p>
+              <p className='card-text'>
+                {item.price}$ x {item.count} ={" "}
+                {(item.price * item.count).toFixed(2)}$
+              </p>
             </div>
           </div>
         ))}
@@ -67,7 +79,6 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
 
   return (
     <div className='container mt-5'>
-      cart data
       <SummaryDisplay items={cart} />
       <div className='form-group'>
         <form onSubmit={handleSubmit(onSubmit)}>
