@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.css";
+import SearchBar from "./Searchbar";
 import React, { useState, useEffect } from "react";
 
 function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   const [catalog, setCatalog] = useState([]);
-
   const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
@@ -30,24 +30,27 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   }, [cart]);
 
   const listItems = catalog.map((el) => (
-    <div>
+    <div className='container-md'>
       <div className='row border-top border-bottom' key={el.id}>
-        <div className='row main align-items-center'>
-          <div className='col-2'>
+        <div className='row main align-items-center' style={{ margin: "20px" }}>
+          <div className='col-3'>
             <img className='img-fluid' src={el.image} alt={el.title} />
           </div>
           <div className='col'>
-            <div className='row text-muted'>{el.title}</div>
-            <div className='row'>{el.flavor}</div>
-            <div className='col'>
-              <div className='row text-muted'>{el.title}</div>
-              <div className='row'>{el.category}</div>
+            <div className='row text-muted'>
+              <h5>{el.title}</h5>
             </div>
-            <div className='col'>
+            <div className='row' style={{ marginTop: "20px" }}>
+              Flavor: {el.flavor}
+            </div>
+            <div className='col' style={{ marginTop: "20px" }}>
+              <div className='row'>{el.description}</div>
+            </div>
+            <div className='col' style={{ marginTop: "20px" }}>
               <button onClick={() => removeFromCart(el)}> - </button>
               <button onClick={() => addToCart(el)}> + </button>
             </div>
-            <div className='col'>
+            <div className='col' style={{ marginTop: "20px" }}>
               ${el.price}{" "}
               <span className='close'>
                 ×{cart.filter((item) => item.id === el.id).length}
@@ -115,16 +118,26 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   }
 
   function viewCheckout() {
-    console.log(cart);
+    // console.log(cart);
     setCart(cart);
-    console.log(summarizeItems(cart));
+    // console.log(summarizeItems(cart));
     // setDataF(data);
     setViewer(1);
   }
 
+  const [filteredItems, setFilteredItems] = useState(items);
+
+  const handleSearch = (query) => {
+    const lowercasedQuery = query.toLowerCase();
+    const results = items.filter((item) =>
+      item.toLowerCase().includes(lowercasedQuery)
+    );
+    setFilteredItems(results);
+  };
+
   return (
     <div className='container-fluid' style={{ margin: "20px" }}>
-      STORE SE/ComS3190
+      <SearchBar onSearch={handleSearch} />
       <div className='d-flex'>
         <div className='card'>
           <div className='row'>
@@ -163,7 +176,7 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
             className='btn btn-primary'
             onClick={viewCheckout}
           >
-            Cart
+            Go to Cart
           </button>
         </div>
       </div>
