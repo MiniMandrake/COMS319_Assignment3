@@ -1,35 +1,66 @@
 [
-    {
-        "id": 1,
-        "title": "Body Armor",
-        "flavor": "Tropical Punch",
-        "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
-        "price": "4.99",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790425790382162/IMG_0667-removebg-preview.png?ex=672965a2&is=67281422&hm=5f6858e8c65880696f86c85b2677e510076173996e36659d14dd42f2766cbbaa&=&format=webp&quality=lossless&width=471&height=627"   
-    },
-    {
-        "id": 2,
-        "title": "Body Armor",
-        "flavor": "Strawberry Banana",
-        "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
-        "price": "4.99",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790426021072927/IMG_0668-removebg-preview.png?ex=672965a2&is=67281422&hm=108b2d65c549807c1edc1924aaf863c877ed8f80951e5a6cb5007d411a96664c&=&format=webp&quality=lossless&width=471&height=627"
-    },
-    {
-        "id": 3,
-        "title": "Califia Farms Mocha Latte",
-        "flavor": "Almound Milk",
-        "description": "Plant based coffee made with almound milk as a dairy-free alternative.",
-        "price": "12.59",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195029446707/IMG_0669-removebg-preview.png?ex=67296cde&is=67281b5e&hm=fb93c83c39ae0f22864be39d348ae91ba4150a20fe03fff2686c726176076186&=&format=webp&quality=lossless&width=471&height=627"
-    },
-    {
-        "id": 4,
-        "title": "Starbucks Iced Expresso",
-        "flavor": "Pumpkin Spice Latte",
-        "description": "Bring the Fall flavors to your fridge with a large container of the official Starbucks Pumpkin Spice Latte!",
-        "price": "8.79",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195595804712/IMG_0670-removebg-preview.png?ex=67296cde&is=67281b5e&hm=d75afea1b64cabc99d3abc79856bde273018fc4f941484af89d4e1768cc0806a&=&format=webp&quality=lossless&width=471&height=627"
-    }
-
+  {
+    "id": 1,
+    "title": "Body Armor",
+    "flavor": "Tropical Punch",
+    "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
+    "price": "7.56",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790425790382162/IMG_0667-removebg-preview.png?ex=672965a2&is=67281422&hm=5f6858e8c65880696f86c85b2677e510076173996e36659d14dd42f2766cbbaa&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 2,
+    "title": "Body Armor",
+    "flavor": "Strawberry Banana",
+    "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
+    "price": "4.99",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790426021072927/IMG_0668-removebg-preview.png?ex=672965a2&is=67281422&hm=108b2d65c549807c1edc1924aaf863c877ed8f80951e5a6cb5007d411a96664c&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 3,
+    "title": "Califia Farms Mocha Latte",
+    "flavor": "Almound Milk",
+    "description": "Plant based coffee made with almound milk as a dairy-free alternative.",
+    "price": "12.59",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195029446707/IMG_0669-removebg-preview.png?ex=67296cde&is=67281b5e&hm=fb93c83c39ae0f22864be39d348ae91ba4150a20fe03fff2686c726176076186&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 4,
+    "title": "Starbucks Iced Expresso",
+    "flavor": "Pumpkin Spice Latte",
+    "description": "Bring the Fall flavors to your fridge with a large container of the official Starbucks Pumpkin Spice Latte!",
+    "price": "8.79",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195595804712/IMG_0670-removebg-preview.png?ex=67296cde&is=67281b5e&hm=d75afea1b64cabc99d3abc79856bde273018fc4f941484af89d4e1768cc0806a&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 5,
+    "title": "100 Plus",
+    "flavor": "Original",
+    "description": "A clear, carbonated isotonic drink bottle featuring a distinctive label with blue, red, and green stripes, known for refreshing and rehydrating the body.",
+    "price": "4.99",
+    "image": "https://cdn.discordapp.com/attachments/1277706681706352722/1302856456130920488/100PLUS_ORIGINAL_48a6fbe2-c946-4924-95ed-150d50cdc76e_grande-removebg-preview.png?ex=6729a321&is=672851a1&hm=a9197455422aa443643b67a0ba0491ac4db6ca3ace320a731f911a8dcd333ef9&"
+  },
+  {
+    "id": 6,
+    "title": "Milo",
+    "flavor": "Chocolate",
+    "description": "A chocolate-malt beverage powder popular for its rich, creamy taste and energy-boosting properties. Often enjoyed hot or cold, Milo is made with malted barley and cocoa, providing a source of vitamins, minerals, and energy.",
+    "price": "6.99",
+    "image": "https://cdn.discordapp.com/attachments/1277706681706352722/1302856457032564799/bfc76c19-f244-4c1a-b77a-86fec216d56a-retina-large-removebg-preview.png?ex=6729a321&is=672851a1&hm=98fb19a27de729093cf506c6baeb00820471fb201b30d05349eb2378ca2de295&"
+  },
+  {
+    "id": 7,
+    "title": "Premier Protein Shake",
+    "flavor": "Chocolate Peanut Butter",
+    "description": "A chocolate peanut butter-flavored protein shake bottle with a rich brown color and nutritional highlights on the label, offering 30g of protein and additional health benefits.",
+    "price": "9.69",
+    "image": "https://cdn.discordapp.com/attachments/1277706681706352722/1302856456416268358/n-Premier_Protein_Product_Thumbnail_Chocolate_PB_Shake_11_5oz-removebg-preview.png?ex=6729a321&is=672851a1&hm=fc054115362a9dced5636e78ad6c6e929c5a531251e1bd0fc4c75cfdfdad2d69&"
+  },
+  {
+    "id": 8,
+    "title": "Lean Body",
+    "flavor": "Salted Caramel",
+    "description": "A protein-packed meal replacement shake for muscle support and weight management, low in sugar and carbs.",
+    "price": "7.89",
+    "image": "https://cdn.discordapp.com/attachments/1277706681706352722/1302856456789299210/010629014-1-removebg-preview.png?ex=6729a321&is=672851a1&hm=f00462e93646eca4658ae79a51adbf064bf0a41f3e817d78eac224cbbe931b5f&"
+  }
 ]
