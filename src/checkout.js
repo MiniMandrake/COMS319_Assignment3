@@ -78,13 +78,16 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     setViewer(2);
   };
 
+
+  function back() {
+    setViewer(0);
+  }
+
   const maintainHooks = () => {
     setCart(cart);
     setDataF(dataF);
     setViewer(0);
   };
-
-
 
   return (
     <div className='container mt-5'>

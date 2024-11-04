@@ -1,10 +1,16 @@
 import "bootstrap/dist/css/bootstrap.css";
+import SearchBar from "./Searchbar";
 import React, { useState, useEffect } from "react";
 
 function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   const [catalog, setCatalog] = useState([]);
-
+  // const [filteredCatalog, setFilteredCatalog] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
+  const [query, setQuery] = useState("");
+
+  // const filteredCatalog = catalog.filter((el) =>
+  //   el.title.toLowerCase().includes(query.toLowerCase())
+  // );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,36 +34,6 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     };
     total();
   }, [cart]);
-
-  const listItems = catalog.map((el) => (
-    <div>
-      <div className='row border-top border-bottom' key={el.id}>
-        <div className='row main align-items-center'>
-          <div className='col-2'>
-            <img className='img-fluid' src={el.image} alt={el.title} />
-          </div>
-          <div className='col'>
-            <div className='row text-muted'>{el.title}</div>
-            <div className='row'>{el.flavor}</div>
-            <div className='col'>
-              <div className='row text-muted'>{el.title}</div>
-              <div className='row'>{el.category}</div>
-            </div>
-            <div className='col'>
-              <button onClick={() => removeFromCart(el)}> - </button>
-              <button onClick={() => addToCart(el)}> + </button>
-            </div>
-            <div className='col'>
-              ${el.price}{" "}
-              <span className='close'>
-                ×{cart.filter((item) => item.id === el.id).length}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ));
 
   function summarizeItems(items) {
     // Create a summary object to store each unique item and count
@@ -109,14 +85,57 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     </div>
   ));
 
-  function howManyofThis(id) {
-    let hmot = cart.filter((cartItem) => cartItem.id === id);
-    return hmot.length;
+  function viewCheckout() {
+    // console.log(cart);
+    setCart(cart);
+
+    // console.log(summarizeItems(cart));
+    // setDataF(data);
+    setViewer(1);
   }
 
-  function viewCheckout() {
-    console.log(cart);
-    setCart(cart);
+  const handleSearch = (event) => {
+    setQuery(event.target.value);
+  };
+
+  const filteredCatalog = catalog.filter((el) =>
+    el.title.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const listItems = filteredCatalog.map((el) => (
+    <div className='container-md'>
+      <div className='row border-top border-bottom' key={el.id}>
+        <div className='row main align-items-center' style={{ margin: "20px" }}>
+          <div className='col-3'>
+            <img className='img-fluid' src={el.image} alt={el.title} />
+          </div>
+          <div className='col'>
+            <div className='row text-muted'>
+              <h5>{el.title}</h5>
+            </div>
+            <div className='row' style={{ marginTop: "20px" }}>
+              Flavor: {el.flavor}
+            </div>
+            <div className='col' style={{ marginTop: "20px" }}>
+              <div className='row'>{el.description}</div>
+            </div>
+            <div className='col' style={{ marginTop: "20px" }}>
+              <button onClick={() => removeFromCart(el)}> - </button>
+              <button onClick={() => addToCart(el)}> + </button>
+            </div>
+            <div className='col' style={{ marginTop: "20px" }}>
+              ${el.price}{" "}
+              <span className='close'>
+                ×{cart.filter((item) => item.id === el.id).length}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ));
+
+
 
     if (!cart || cart.length === 0) {
       alert("Your cart is empty. Please add items to proceed.");
@@ -126,9 +145,15 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     console.log(summarizeItems(cart));
     setViewer(1);
   }
+
   return (
     <div className='container-fluid' style={{ margin: "20px" }}>
-      STORE SE/ComS3190
+      <input
+        type='text'
+        placeholder='Search...'
+        value={query}
+        onChange={handleSearch} // Make sure this is set correctly
+      />
       <div className='d-flex'>
         <div className='card'>
           <div className='row'>
@@ -167,7 +192,7 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
             className='btn btn-primary'
             onClick={viewCheckout}
           >
-            Cart
+            Go to Cart
           </button>
         </div>
       </div>

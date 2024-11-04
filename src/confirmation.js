@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { useState, useEffect } from "react";
+import { alignPropType } from "react-bootstrap/esm/types";
 
 function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   // remove all data from submission
@@ -77,7 +78,7 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   }
 
   return (
-    <div className='container mt-5'>
+    <div className='container mt-5' style={{ margin: "20px" }}>
       <h1>Summary of Payment Information</h1>
       <h3>{dataF.fullName}</h3>
       <h3>{dataF.email}</h3>
@@ -87,13 +88,17 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
         {dataF.city}, {dataF.state}, {dataF.zip}
       </h3>
       <SummaryDisplay items={cart} />
-      <button className='btn btn-secondary' onClick={updateHooks}>
-        Submit
-      </button>
+
+      <div style={{ textAlign: "center" }}>
+        <button className='btn btn-primary' onClick={updateHooks}>
+          Confirm Order
+        </button>
+      </div>
       <button className='btn btn-secondary' onClick={maintainHooks}
               style={{marginLeft: "1em"}}>
         Back
       </button>
+
     </div>
   );
 }
