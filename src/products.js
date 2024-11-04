@@ -117,11 +117,15 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   function viewCheckout() {
     console.log(cart);
     setCart(cart);
+
+    if (!cart || cart.length === 0) {
+      alert("Your cart is empty. Please add items to proceed.");
+      return;
+    }
+
     console.log(summarizeItems(cart));
-    // setDataF(data);
     setViewer(1);
   }
-
   return (
     <div className='container-fluid' style={{ margin: "20px" }}>
       STORE SE/ComS3190
