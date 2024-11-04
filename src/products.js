@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-import SearchBar from "./Searchbar";
 import React, { useState, useEffect } from "react";
 
 function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
@@ -89,6 +88,12 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     // console.log(cart);
     setCart(cart);
 
+    if (!cart || cart.length === 0) {
+      alert("Your cart is empty. Please add items to proceed.");
+      return;
+    }
+
+    console.log(summarizeItems(cart));
     // console.log(summarizeItems(cart));
     // setDataF(data);
     setViewer(1);
@@ -134,17 +139,6 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
       </div>
     </div>
   ));
-
-
-
-    if (!cart || cart.length === 0) {
-      alert("Your cart is empty. Please add items to proceed.");
-      return;
-    }
-
-    console.log(summarizeItems(cart));
-    setViewer(1);
-  }
 
   return (
     <div className='container-fluid' style={{ margin: "20px" }}>
