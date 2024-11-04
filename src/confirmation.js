@@ -5,6 +5,7 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
   // remove all data from submission
   // send user back to payment page after submission
   const updateHooks = () => {
+    setCart([]);
     setDataF({});
     setViewer(0);
   };
