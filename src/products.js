@@ -21,9 +21,9 @@ function Products({ dataF, setDataF, viewer, setViewer }) {
     const total = () => {
       let totalAmount = 0;
       for (let i = 0; i < cart.length; i++) {
-        totalAmount += cart[i].price;
+        totalAmount += parseFloat(cart[i].price);
       }
-      setCartTotal(totalAmount);
+      setCartTotal(totalAmount.toFixed(2));
       console.log(totalAmount);
     };
     total();
@@ -37,7 +37,7 @@ function Products({ dataF, setDataF, viewer, setViewer }) {
         </div>
         <div class='col'>
           <div class='row text-muted'>{el.title}</div>
-          <div class='row'>{el.category}</div>
+          <div class='row'>{el.flavor}</div>
         </div>
         <div class='col'>
           <button
