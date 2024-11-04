@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import React, { useState, useEffect } from "react";
 
-function Products() {
+function Products({ dataF, setDataF, viewer, setViewer }) {
   const [catalog, setCatalog] = useState([]);
   const [cart, setCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
@@ -92,34 +92,54 @@ function Products() {
     return hmot.length;
   }
 
+  function viewCheckout() {
+    setDataF(data);
+    setViewer(1);
+  }
+
   return (
-    <div>
+    <div className='container'>
       STORE SE/ComS3190
-      <div class='card'>
-        <div class='row'>
-          {/* HERE, IT IS THE SHOPING CART */}
-          <div class='col-md-8 cart'>
-            <div class='title'>
-              <div class='row'>
-                <div class='col'>
-                  <h4>
-                    <b>3190 Shopping Cart</b>
-                  </h4>
-                </div>
-                <div class='col align-self-center text-right text-muted'>
-                  <h4>
-                    <b>Products selected {cart.length}</b>
-                  </h4>
-                </div>
-                <div class='col align-self-center text-right text-muted'>
-                  <h4>
-                    <b>Order total: ${cartTotal}</b>
-                  </h4>
+      <div className='d-flex'>
+        <div className='card'>
+          <div className='row'>
+            {/* HERE, IT IS THE SHOPPING CART */}
+            <div className='col-md-8 cart'>
+              <div className='title'>
+                <div className='row'>
+                  <div className='col'>
+                    <h4>
+                      <b>3190 Shopping Cart</b>
+                    </h4>
+                  </div>
+                  <div className='col align-self-center text-right text-muted'>
+                    <h4>
+                      <b>Products selected {cart.length}</b>
+                    </h4>
+                  </div>
+                  <div className='col align-self-center text-right text-muted'>
+                    <h4>
+                      <b>Order total: ${cartTotal}</b>
+                    </h4>
+                  </div>
                 </div>
               </div>
+              <div>{listItems}</div>
             </div>
-            <div>{listItems}</div>
           </div>
+        </div>
+        {/* Right-aligned div */}
+        <div
+          className='bg-light p-3'
+          style={{ width: "200px", marginLeft: "auto" }}
+        >
+          <button
+            type='submit'
+            className='btn btn-primary'
+            onClick={viewCheckout}
+          >
+            Cart
+          </button>
         </div>
       </div>
     </div>
