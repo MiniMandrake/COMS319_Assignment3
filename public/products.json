@@ -1,35 +1,34 @@
 [
-    {
-        "id": 1,
-        "title": "Body Armor",
-        "flavor": "Tropical Punch",
-        "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
-        "price": "4.99",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790425790382162/IMG_0667-removebg-preview.png?ex=672965a2&is=67281422&hm=5f6858e8c65880696f86c85b2677e510076173996e36659d14dd42f2766cbbaa&=&format=webp&quality=lossless&width=471&height=627"   
-    },
-    {
-        "id": 2,
-        "title": "Body Armor",
-        "flavor": "Strawberry Banana",
-        "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
-        "price": "4.99",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790426021072927/IMG_0668-removebg-preview.png?ex=672965a2&is=67281422&hm=108b2d65c549807c1edc1924aaf863c877ed8f80951e5a6cb5007d411a96664c&=&format=webp&quality=lossless&width=471&height=627"
-    },
-    {
-        "id": 3,
-        "title": "Califia Farms Mocha Latte",
-        "flavor": "Almound Milk",
-        "description": "Plant based coffee made with almound milk as a dairy-free alternative.",
-        "price": "12.59",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195029446707/IMG_0669-removebg-preview.png?ex=67296cde&is=67281b5e&hm=fb93c83c39ae0f22864be39d348ae91ba4150a20fe03fff2686c726176076186&=&format=webp&quality=lossless&width=471&height=627"
-    },
-    {
-        "id": 4,
-        "title": "Starbucks Iced Expresso",
-        "flavor": "Pumpkin Spice Latte",
-        "description": "Bring the Fall flavors to your fridge with a large container of the official Starbucks Pumpkin Spice Latte!",
-        "price": "8.79",
-        "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195595804712/IMG_0670-removebg-preview.png?ex=67296cde&is=67281b5e&hm=d75afea1b64cabc99d3abc79856bde273018fc4f941484af89d4e1768cc0806a&=&format=webp&quality=lossless&width=471&height=627"
-    }
-
+  {
+    "id": 1,
+    "title": "Body Armor",
+    "flavor": "Tropical Punch",
+    "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
+    "price": "4.99",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790425790382162/IMG_0667-removebg-preview.png?ex=672965a2&is=67281422&hm=5f6858e8c65880696f86c85b2677e510076173996e36659d14dd42f2766cbbaa&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 2,
+    "title": "Body Armor",
+    "flavor": "Strawberry Banana",
+    "description": "A refreshing drink packed with electrolytes fit for the best athletes in the world.",
+    "price": "4.99",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790426021072927/IMG_0668-removebg-preview.png?ex=672965a2&is=67281422&hm=108b2d65c549807c1edc1924aaf863c877ed8f80951e5a6cb5007d411a96664c&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 3,
+    "title": "Califia Farms Mocha Latte",
+    "flavor": "Almound Milk",
+    "description": "Plant based coffee made with almound milk as a dairy-free alternative.",
+    "price": "12.59",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195029446707/IMG_0669-removebg-preview.png?ex=67296cde&is=67281b5e&hm=fb93c83c39ae0f22864be39d348ae91ba4150a20fe03fff2686c726176076186&=&format=webp&quality=lossless&width=471&height=627"
+  },
+  {
+    "id": 4,
+    "title": "Starbucks Iced Expresso",
+    "flavor": "Pumpkin Spice Latte",
+    "description": "Bring the Fall flavors to your fridge with a large container of the official Starbucks Pumpkin Spice Latte!",
+    "price": "8.79",
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302798195595804712/IMG_0670-removebg-preview.png?ex=67296cde&is=67281b5e&hm=d75afea1b64cabc99d3abc79856bde273018fc4f941484af89d4e1768cc0806a&=&format=webp&quality=lossless&width=471&height=627"
+  }
 ]
