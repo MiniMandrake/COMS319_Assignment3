@@ -3,6 +3,14 @@
     "id": 1,
     "category": "mens'",
     "title": "placeholder",
+    "price": 15,
+    "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790425790382162/IMG_0667-removebg-preview.png?ex=672965a2&is=67281422&hm=5f6858e8c65880696f86c85b2677e510076173996e36659d14dd42f2766cbbaa&=&format=webp&quality=lossless&width=443&height=591"
+  },
+  {
+    "id": 2,
+    "category": "mens'",
+    "title": "YEHHHHH",
+    "price": 2.99,
     "image": "https://media.discordapp.net/attachments/1277706681706352722/1302790425790382162/IMG_0667-removebg-preview.png?ex=672965a2&is=67281422&hm=5f6858e8c65880696f86c85b2677e510076173996e36659d14dd42f2766cbbaa&=&format=webp&quality=lossless&width=443&height=591"
   },
   {},
