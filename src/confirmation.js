@@ -10,6 +10,12 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     setViewer(0);
   };
 
+  const maintainHooks = () => {
+    setCart(cart);
+    setDataF(dataF);
+    setViewer(1);
+  };
+
   function summarizeItems(items) {
     // Create a summary object to store each unique item and count
     const summary = {};
@@ -83,6 +89,10 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
       <SummaryDisplay items={cart} />
       <button className='btn btn-secondary' onClick={updateHooks}>
         Submit
+      </button>
+      <button className='btn btn-secondary' onClick={maintainHooks}
+              style={{marginLeft: "1em"}}>
+        Back
       </button>
     </div>
   );
