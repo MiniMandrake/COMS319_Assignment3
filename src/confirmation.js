@@ -11,6 +11,12 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     setViewer(0);
   };
 
+  const maintainHooks = () => {
+    setCart(cart);
+    setDataF(dataF);
+    setViewer(1);
+  };
+
   function summarizeItems(items) {
     // Create a summary object to store each unique item and count
     const summary = {};
@@ -82,11 +88,17 @@ function Confirmation({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
         {dataF.city}, {dataF.state}, {dataF.zip}
       </h3>
       <SummaryDisplay items={cart} />
+
       <div style={{ textAlign: "center" }}>
         <button className='btn btn-primary' onClick={updateHooks}>
           Confirm Order
         </button>
       </div>
+      <button className='btn btn-secondary' onClick={maintainHooks}
+              style={{marginLeft: "1em"}}>
+        Back
+      </button>
+
     </div>
   );
 }

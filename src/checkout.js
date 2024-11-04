@@ -30,6 +30,7 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
 
   function SummaryDisplay({ items }) {
     const [summarizedItems, setSummarizedItems] = useState([]);
+    
 
     useEffect(() => {
       // Summarize the items when component mounts or items change
@@ -77,9 +78,16 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
     setViewer(2);
   };
 
+
   function back() {
     setViewer(0);
   }
+
+  const maintainHooks = () => {
+    setCart(cart);
+    setDataF(dataF);
+    setViewer(0);
+  };
 
   return (
     <div className='container mt-5'>
@@ -150,6 +158,11 @@ function Checkout({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
           <button type='submit' className='btn btn-primary'>
             Submit
           </button>
+          <button className='btn btn-secondary' onClick={maintainHooks}
+              style={{marginLeft: "1em"}}>
+        Back
+      </button>
+
         </form>
       </div>
     </div>
