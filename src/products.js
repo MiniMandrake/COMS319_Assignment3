@@ -40,10 +40,6 @@ function Products({ dataF, setDataF, viewer, setViewer, cart, setCart }) {
             <div className='row text-muted'>{el.title}</div>
             <div className='row'>{el.flavor}</div>
             <div className='col'>
-              <div className='row text-muted'>{el.title}</div>
-              <div className='row'>{el.category}</div>
-            </div>
-            <div className='col'>
               <button onClick={() => removeFromCart(el)}> - </button>
               <button onClick={() => addToCart(el)}> + </button>
             </div>
